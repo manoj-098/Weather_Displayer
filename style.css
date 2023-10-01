@@ -99,4 +99,20 @@ body{
     .main_div{
     width:85%;
     }
+    .footer
+{
+    gap:4vh;
+    border:1px solid red;
+}
+.col img
+{
+    height:3vh;
+    /* width:5vh; */
+}
+.col h1{
+ font-size:1.5vh;
+}
+.col .span{
+    font-size:3vh;
+}
 }
