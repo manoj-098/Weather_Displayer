@@ -1,4 +1,4 @@
-*
+        *
 {
     margin:0;
     padding:0;
@@ -9,7 +9,7 @@ body{
 }
 .main_div
 {
-    height:75vh;
+    height:80vh;
     width:60vh;
     border:2px solid black;
     background-image: linear-gradient(135deg,#00feba,#5b548a);
@@ -25,7 +25,6 @@ body{
     align-items: center;
     gap:2vh;
     margin-top:2vh;
-    /* border:1px solid red; */
     
 }
 .search_div input{
@@ -41,7 +40,6 @@ body{
 .search_div button{
     height:6vh;
     width:6vh;
-    /* border:1px solid red; */
     border-radius: 50px;
     border:0;
     outline:0;
@@ -66,7 +64,6 @@ body{
     color:white;
     display:flex;
     gap:6vh;
-    /* border:1px solid red; */
     justify-content: center;
     margin-top:5vh;
 }
@@ -74,12 +71,11 @@ body{
 {
     display:flex;
     text-align:left;
-    /* border:1px solid black; */
+
 }
 .col img
 {
     height:4vh;
-    /* width:5vh; */
 }
 
 .col h1{
@@ -106,7 +102,6 @@ body{
 .col img
 {
     height:3vh;
-    /* width:5vh; */
 }
 .col h1{
  font-size:1.5vh;
