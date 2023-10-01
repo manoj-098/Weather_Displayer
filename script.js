@@ -3,7 +3,13 @@ const apiURL='https://api.openweathermap.org/data/2.5/weather?q=';
 
  async function weather()
  {
+   try{
      let city=document.querySelector("#searchbar").value;
+     if(city=="")
+     {
+       alert("Please Enter a Valid Location");
+     }
+     else{
      let URL=apiURL+city+`&appid=${apiKey}&units=metric`;
      let web=await fetch(URL);
      let res=await web.json();
@@ -14,7 +20,7 @@ const apiURL='https://api.openweathermap.org/data/2.5/weather?q=';
     document.querySelector("#temp").innerHTML=Math.round(res.main.temp)+" ºC";
     document.querySelector("#hum").innerHTML=res.main.humidity+" %";
     document.querySelector("#w_speed").innerHTML=res.wind.speed+" Km/h";
-
+    
    let img=document.querySelector('.weather_img');
    let val=res.weather[0].main;
    if(val=="Clear")
@@ -28,12 +34,19 @@ const apiURL='https://api.openweathermap.org/data/2.5/weather?q=';
    else if(val=="Snow")
      img.src="images/snow.png";
    else
-     img.src="images/clear.png";       
+     img.src="images/clear.png";   
+     }    
+    }
+    catch(err)
+    {
+      alert("Entered Location maybe incorrect/Not Found");
+      return;
+    }
  }
 
- console.log("SEARCH");
+
  let bton=document.querySelector("#btn");
- console.log("BUTTON")
+
 
  demo();
  bton.addEventListener('click',demo);
@@ -41,5 +54,4 @@ const apiURL='https://api.openweathermap.org/data/2.5/weather?q=';
  function demo()
  {
      weather();
-
  }
